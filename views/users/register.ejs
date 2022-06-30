@@ -1,0 +1,42 @@
+<% layout('layouts/boilerplate') %> 
+<div class="row ">
+  <div class="card ms-auto me-auto shadow" style="width: 18rem; padding:0;">
+    <img src="https://source.unsplash.com/collection/483251" class="card-img-top w-100" alt="" style="background-size:cover; background-position:center; height:200px;">
+    <div class="card-body">
+      <form action="/register" method="post"  class="validated-form d-flex flex-column align-items-center"  novalidate>
+        <h1 class="text-center">Register</h1>
+        <div class="mb-3">
+            <label class="form-label"for="username">Email:</label>
+            <input class="form-control"type="text" id="email" name="email" required>
+            <div class="valid-feedback">
+                Looks good!
+              </div>
+              <div class="invalid-feedback">
+                Please enter your email:
+              </div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label"for="username">Username:</label>
+            <input class="form-control"type="text" id="username" name="username" required>
+            <div class="valid-feedback">
+                Looks good!
+              </div>
+              <div class="invalid-feedback">
+                Please enter your username:
+              </div>
+        </div>
+        <div class="mb-3">
+            <label class="form-label"for="username">Password:</label>
+            <input class="form-control"type="password" id="password" name="password" required>
+            <div class="valid-feedback">
+                Looks good!
+              </div>
+              <div class="invalid-feedback">
+                Please enter your password:
+              </div>
+        </div>
+        <button class="btn btn-success mb-3">Sign up</button>
+    </form>
+    </div>
+  </div>
+</div>

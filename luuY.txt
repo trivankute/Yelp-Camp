@@ -1,0 +1,3 @@
+layout truy cap tu /layouts/... la dc r
+include thi theo nguyen tac cu~
+may cai con lai cx z

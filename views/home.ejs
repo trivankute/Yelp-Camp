@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/home.css">
+    <title>Yelp-Camp</title>
+</head>
+<body class="vh-100 w-100 container">
+        <main class = "container-fluid h-100 w-100 d-flex flex-column align-items-center justify-content-center  text-center text-white bg-transparent">
+        <nav class="navbar w-100 sticky-top navbar-expand-lg navbar-dark bg-transparent">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="/">YelpCamp</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="/">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="/campgrounds">Campgrounds</a>
+              </li>
+            </ul>
+            <ul class="ms-auto navbar-nav">
+              <% if(!currUser)
+                {
+                  %>
+                  <li class="nav-item">
+                  <a class="nav-link" href="/login">Log in</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="/register">Register</a>
+                  </li>
+                  <%
+                }
+                else
+                { 
+                  %>
+                  <li class="nav-item">
+                  <span class="nav-link" style="text-transform:uppercase;"><%=currUser.username%>  </span>
+                   </li>
+                  <li class="nav-item">
+                  <a class="nav-link " href="/logout">Log out</a>
+                   </li>
+                  <%
+                }
+                 %> 
+            </ul>
+          </div>
+        </div>
+        </nav>
+
+
+            <header class="h-100 d-flex flex-column align-items-center justify-content-center" style="min-width:250px;">
+                <h1>Yelp Camp</h1>
+                <h3 class="lead" style="font-weight:500;">Welcome to Yelp-Camp</h3>
+                <p class="lead" style="max-width:700px; min-width:250px;">This is a website where everyone can post their favorite
+                    campgrounds, share experiences and help people in chosing campgrounds for vacations or holidays in comfort
+                    and satisfactory.
+                </p>
+                <a href="/campgrounds" class="btn btn-lg btn-secondary text-dark bg-light">View campgrounds</a>
+            </header>
+                
+        <footer class="footer sticky-bottom bg-transparent mt-auto mb-3">
+            <div class="container">
+                <span class = "text-white-50">
+                    &copy; YelpCamp2022
+                </span>
+            </div>
+        </footer>
+        </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+<script src="/javascripts/navbarActive.js"></script>
+</body>
+</html>
